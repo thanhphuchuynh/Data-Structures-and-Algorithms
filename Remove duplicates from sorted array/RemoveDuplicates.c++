@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <conio.h>
 #include <iostream>
-void removeDuplicates(int arr[]){
-   const int n =(int) sizeof(arr);
+void removeDuplicates(int arr[],const int n){
    int temp[n];
-   int j = 0;
-//    printf("%d",n);
+   int j = 0;  
+     printf("length: %d \n",n);
 
-    for(int i = 0; i<=n-1;i++){
+    for(int i = 0; i<=n-2;i++){
         if(arr[i]!=arr[i+1]){
             temp[j++] = arr[i];
         }
@@ -19,8 +18,10 @@ void removeDuplicates(int arr[]){
 
 int main(){
     
-    int arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5}; 
-    
-    removeDuplicates(arr);
+    int arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5, 6,7}; 
+    int n =(int) sizeof(arr)/sizeof(arr[0]);
+    int a = n;
+    printf("length: %d \n",n);
+    removeDuplicates(arr,n);
     return 1;
 }
